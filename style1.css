@@ -1,0 +1,229 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px; /* Atur ukuran font utama */
+    line-height: 1.5;
+}
+.navbar {
+    background-color: burlywood;
+    border: none;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: black;
+    font-size: 1.75rem; /* Adjust font size for desktop */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Off-canvas menu styles */
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%; /* Start off-screen */
+    width: 250px; /* Width of the off-canvas menu */
+    background-color: #333;
+    transition: right 0.3s ease; /* Smooth transition for sliding in/out */
+    z-index: 999; /* Slightly below the navbar to allow overlay */
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 300px) {
+    .navbar {
+        position: fixed; /* Keep navbar fixed on top */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show toggle button on mobile */
+        cursor: pointer;
+    }
+
+    .navbar-nav {
+        display: none; /* Hide navbar links initially on mobile */
+    }
+
+    .nav-active .off-canvas-menu {
+        right: 0; /* Slide in the off-canvas menu */
+    }
+}
+
+.Heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.Heading h1{
+    font-size: 50px;
+    color:black;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.Heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(25, 8, 65);
+}
+
+.Heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.ter{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.nar{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image:hover img{
+    transform: scale(1.2);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-content p{
+    font-size: 12px; 
+    line-height: 1.5;
+    color: #666;
+
+}
+
+.custom-background{
+    width: 80%; /* Lebar frame luar */
+    margin: 60px auto; /* Posisi frame luar di tengah halaman */
+    padding: 40px;
+    border: 2px solid #ccc; /* Border untuk frame luar */
+    border-radius: 10px;
+    background-color: black; /* Warna latar belakang frame luar */
+}
+
+/* CSS untuk mengatur card */
+.custom-card {
+    background-color: white; /* Warna latar belakang card */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 400px; /* Batasi lebar maksimum card */
+    margin: auto; /* Pusatkan card secara horizontal */
+    margin-bottom: 20px; /* Beri jarak antar card */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* CSS untuk memperkecil lebar card pada layar yang lebih lebar */
+.custom-card .card-img-top {
+    object-fit: cover;
+    height: 200px; /* Atur tinggi gambar card (sesuaikan sesuai kebutuhan) */
+}
+
+.custom-card .card-body {
+    padding: 1rem; /* Add padding inside card body */
+}
+
+/* CSS untuk menyesuaikan tinggi card agar sama rata di setiap baris */
+@media (min-width: 400px) {
+    .row-cols-md-2 .col {
+        display: flex;
+    }
+}
+
+/* CSS untuk latar belakang di luar card */
+body {
+    background-color: #f5f5f5; /* Warna latar belakang body */
+    padding-top: 70px; /* Berikan ruang di atas untuk fixed navbar */
+}
+
+/* CSS untuk footer */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .social-icons {
+    margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+    margin: 0 5px;
+}
+
+.footer .website-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}

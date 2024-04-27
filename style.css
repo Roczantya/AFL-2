@@ -1,0 +1,362 @@
+/* Atur ukuran font untuk memastikan konsistensi di seluruh halaman */
+body {
+    font-size: 16px; /* Atur ukuran font utama */
+    line-height: 1.5; /* Atur jarak baris (line-height) */
+}
+/* navbar */
+/* Base navbar styles */
+.navbar {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: black;
+    font-size: 1.75rem; /* Adjust font size for desktop */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Off-canvas menu styles */
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%; /* Start off-screen */
+    width: 250px; /* Width of the off-canvas menu */
+    background-color: #333;
+    transition: right 0.3s ease; /* Smooth transition for sliding in/out */
+    z-index: 999; /* Slightly below the navbar to allow overlay */
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 300px) {
+    .navbar {
+        position: fixed; /* Keep navbar fixed on top */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show toggle button on mobile */
+        cursor: pointer;
+    }
+
+    .navbar-nav {
+        display: none; /* Hide navbar links initially on mobile */
+    }
+
+    .nav-active .off-canvas-menu {
+        right:  0; /* Slide in the off-canvas menu */
+    }
+}
+
+/* navbar */
+
+.carousel-item {
+    height: 100vh; /* Set tinggi carousel sesuai dengan tinggi viewport */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Biarkan gambar mengisi area carousel */
+    height: 100%; /* Tinggi gambar sesuai dengan tinggi carousel */
+    width: 100%; /* Lebar gambar mengikuti lebar carousel */
+}
+
+.in-middle {
+    position: absolute;
+    color: white; /* Ubah warna teks menjadi putih */
+    top: 50%; /* Position at vertical center of parent */
+    left: 50%; /* Position at horizontal center of parent */
+    transform: translate(-50%, -50%); /* Move back by half of own width and height */
+    text-align: center; /* Center text horizontally */
+}
+
+/* visi misi */
+.header{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.header h1{
+    font-size: 50px;
+    color:black;
+    margin-bottom: 25px;
+    position: relative;
+    
+}
+/* visi 1 */
+
+.header h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(25, 8, 65);
+}
+
+.visimisi{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.nas{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img{
+    max-width: 800%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image:hover img{
+    transform: scale(1.2);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* visi 2 */
+.visimisi2{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.mam{
+    display: flex;
+    justify-content:space-between ;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image2{
+    flex: 0 0 50%;
+    padding: 0 20px;
+    margin-left: 40px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.about-image2 img{
+    max-width: 800%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image2:hover img{
+    transform: scale(1.2);
+}
+
+.about-content2 {
+    flex: 1;
+}
+.about-content2 h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #333;
+}
+/* visi 2 */
+
+/* visi 3 */
+.visimisi3{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.mau{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image3{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image3 img{
+    max-width: 800%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image3:hover img{
+    transform: scale(1.2);
+}
+
+.about-content3 {
+    flex: 1;
+}
+.about-content3 h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #333;
+}
+/* visi 3 */
+
+/* card */
+.custom-background{
+    width: 80%; /* Lebar frame luar */
+    margin: 60px auto; /* Posisi frame luar di tengah halaman */
+    padding: 40px;
+    font-size: 14px;
+    border: 2px solid #ccc; /* Border untuk frame luar */
+    border-radius: 10px;
+    box-shadow: #666 solid #060606;
+    background-color: rgb(199, 52, 12); /* Warna latar belakang frame luar */
+}
+
+.custom-card {
+    height: 100%; /* Ensure each card occupies full height of parent */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f8f9fa; /* Set a light background color */
+    border: 1px solid #dee2e6; /* Add a subtle border */
+    border-radius: 8px; /* Add rounded corners */
+    overflow: hidden; /* Hide overflow content */
+}
+.custom-card p{
+    font-size: 14px;
+}
+.bgger{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    
+}
+.custom-card .card-img-top {
+    object-fit: cover; /* Ensure images cover entire card */
+    height: 200px; /* Set a fixed height for card images */
+    border-bottom: 1px solid #dee2e6; /* Add border below image */
+    
+}
+
+.custom-card .card-body {
+    padding: 1rem; /* Add padding inside card body */
+}
+
+.custom-card .card-title {
+    font-size: 1.25rem; /* Increase title font size */
+    margin-bottom: 0.5rem; /* Add spacing below title */
+}
+
+.custom-card .card-text {
+    font-size: 0.875rem; /* Adjust text font size */
+}
+
+.custom-card .card-price {
+    font-size: 1.25rem; /* Ukuran font untuk harga */
+    font-weight: bold; /* Tekanan tebal pada harga */
+    color: #007bff; /* Warna biru untuk harga (sesuaikan dengan preferensi warna Anda) */
+    margin-bottom: 0.5rem; /* Spasi bawah di antara teks harga dan tombol */
+}
+
+.custom-card .btn-primary {
+    font-size: 0.875rem; /* Adjust button font size */
+}
+
+* {box-sizing: border-box}
+
+/* card */
+footer {
+    background-color: #060606;  /* Example background color */
+    padding: 20px;
+    display: flex;  /* Arrange content vertically */
+    flex-direction: column;  /* Stack content top-to-bottom */
+    align-items: center;  /* Vertically center content */
+}
+
+.social-icons {
+    display: flex;  /* Arrange icons horizontally */
+}
+
+.social-icons img {
+    margin-right: 10px;  /* Add spacing between icons */
+}
+
+.website-title {
+    font-size: 2em;  /* Adjust font size as needed */
+    margin-bottom: 10px;  /* Add spacing below title */
+    text-align: center;
+    color:#ccc;
+}
+
+.desc ul {
+    list-style: none;  /* Remove default bullet points */
+    margin: 0;  /* Remove default list margins */
+    padding: 0;  /* Remove default list padding */
+}
+
+.desc ul li {
+    display: inline-block;  /* Keep list items on the same line */
+    margin-right: 20px;  /* Add spacing between links */
+}
+
+.desc p {
+    margin: 0;  /* Remove default paragraph margins */
+    font-size: 0.8em;  /* Adjust font size as needed */
+    color: #666; 
+    text-align: center; /* Example text color */
+}
+
+/* Style for links */
+footer a {
+    color: white;  /* Set text color to white */
+    text-decoration: none;  /* Remove underline */
+    transition: color 0.3s ease;  /* Add smooth transition on hover */
+    background-color: #060606;
+}
+
+/* Hover effect for links */
+footer a:hover {
+    color: black;  /* Change text color on hover */
+}
+
